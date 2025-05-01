@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moje Portfólio</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <button id="hamburger-button" class="hamburger-menu" aria-label="Otvoriť menu" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+    </button>
+    <a href="#" class="logo-container">
+        <img id="logo" src="moje%20Logo.png" alt="JG logo" onerror="this.src='https://placehold.co/45x45/2c3e50/ffffff?text=JG'; this.onerror=null;">
+        <span id="fullName">Jakub Gloncak</span>
+    </a>
+    <nav id="main-nav" class="main-navigation" aria-hidden="true">
+        <ul>
+            <li><a href="#home">Domov</a></li>
+            <li><a href="#projects">Projekty</a></li>
+            <li><a href="#work">Skúsenosti</a></li>
+            <li><a href="#about">O Mne</a></li>
+            <li><a href="#contacts">Kontakt</a></li>
+            <li><a href="#profile-timeline-start">Profil</a></li>
+        </ul>
+    </nav>
+    <button id="btnToggle">
+        Profil
+    </button>
+</header>
+
+<main>
+    <div id="slider" class="slider">
+
+        <div class="panel page1">
+            <section id="home" class="hero">
+                <div class="hero-bg"></div>
+                <div class="spline-container">
+                    <spline-viewer url="https://prod.spline.design/QZc9bI7sN8Q03QlK/scene.splinecode"></spline-viewer>
+                </div>
+                <div class="hero-text">
+                    <span id="typed-hero"></span><span class="typed-cursor">|</span>
+                    <p class="hero-desc">Som front‑end developer & UX designer.</p>
+                    <nav class="hero-nav">
+                        <a href="#projects" class="hero-nav-link"><i class="fas fa-code"></i> Moje Projekty</a>
+                        <a href="#work" class="hero-nav-link"><i class="fas fa-briefcase"></i> Moje Skúsenosti</a>
+                        <a href="#about" class="hero-nav-link"><i class="fas fa-user"></i> O Mne</a>
+                        <a href="#contacts" class="hero-nav-link"><i class="fas fa-envelope"></i> Kontaktuj ma</a>
+                    </nav>
+                </div>
+                <div class="hero-overlay"></div>
+            </section>
+
+            <section id="projects" class="terminal-display-section animate-on-scroll"> <div class="projects-layout">
+
+                <div class="project-terminal"> <div class="terminal-header">
+                    <div class="buttons">
+                        <span class="button red"></span><span class="button yellow"></span><span class="button green"></span>
+                    </div>
+                    <span class="title">~/projekty/vyber</span> </div>
+                    <div class="terminal-content project-cards-area"> <div class="project-cards-grid">
+
+                        <div class="project-card" data-project-id="portfolio"> <div class="project-card-image">
+                            <img src="projekt1.png" alt="Náhľad projektu Portfólio" onerror="this.src='https://placehold.co/300x200/333/ccc?text=Projekt+1'; this.onerror=null;">
+                        </div>
+                            <div class="project-card-content">
+                                <h4 class="project-card-title">Osobné Portfólio</h4>
+                                <p class="project-card-description">Táto stránka! Responzívny web postavený s HTML, CSS a JS.</p>
+                                <div class="project-card-tags">
+                                    <span class="tag html">HTML5</span>
+                                    <span class="tag css">CSS3</span>
+                                    <span class="tag js">JavaScript</span>
+                                </div>
+                                <div class="project-card-links">
+                                    <a href="#" target="_blank" class="btn-code"><i class="fab fa-github"></i> Kód</a>
+                                    <a href="#" target="_blank" class="btn-live"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card" data-project-id="todo-app"> <div class="project-card-image">
+                            <img src="Projekt2.png" alt="Náhľad projektu Todo App" onerror="this.src='https://placehold.co/300x200/555/ccc?text=Projekt+2'; this.onerror=null;">
+                        </div>
+                            <div class="project-card-content">
+                                <h4 class="project-card-title">React Todo Aplikácia</h4>
+                                <p class="project-card-description">Jednoduchá správa úloh s ukladaním do lokálneho úložiska.</p>
+                                <div class="project-card-tags">
+                                    <span class="tag react">React</span>
+                                    <span class="tag js">JavaScript</span>
+                                    <span class="tag css">CSS3</span>
+                                </div>
+                                <div class="project-card-links">
+                                    <a href="#" target="_blank" class="btn-code"><i class="fab fa-github"></i> Kód</a>
+                                    <a href="#" target="_blank" class="btn-live"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card" data-project-id="blog-gatsby"> <div class="project-card-image">
+                            <img src="Todo.png" alt="Náhľad projektu Blog" onerror="this.src='https://placehold.co/300x200/777/ccc?text=Projekt+3'; this.onerror=null;">
+                        </div>
+                            <div class="project-card-content">
+                                <h4 class="project-card-title">Statický Blog (Gatsby)</h4>
+                                <p class="project-card-description">Blog generovaný pomocou Gatsby.js s Markdown obsahom.</p>
+                                <div class="project-card-tags">
+                                    <span class="tag gatsby">Gatsby</span>
+                                    <span class="tag react">React</span>
+                                    <span class="tag graphql">GraphQL</span>
+                                </div>
+                                <div class="project-card-links">
+                                    <a href="#" target="_blank" class="btn-code"><i class="fab fa-github"></i> Kód</a>
+                                    <a href="#" target="_blank" class="btn-live"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card" data-project-id="vue-xyz"> <div class="project-card-image">
+                            <img src="Todo.png" alt="Náhľad projektu XYZ" onerror="this.src='https://placehold.co/300x200/999/ccc?text=Projekt+4'; this.onerror=null;">
+                        </div>
+                            <div class="project-card-content">
+                                <h4 class="project-card-title">Project XYZ (Vue.js)</h4>
+                                <p class="project-card-description">Experimentálny projekt využívajúci Vue.js a ďalšie technológie.</p>
+                                <div class="project-card-tags">
+                                    <span class="tag vue">Vue.js</span>
+                                    <span class="tag js">JavaScript</span>
+                                    <span class="tag api">API</span>
+                                </div>
+                                <div class="project-card-links">
+                                    <a href="#" target="_blank" class="btn-code"><i class="fab fa-github"></i> Kód</a>
+                                    <a href="#" target="_blank" class="btn-live"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div> <div class="cable-connector"></div>
+
+                <div class="project-display-screen">
+                    <div class="display-placeholder">
+                        <i class="fas fa-power-off display-icon"></i> <p>STATUS: OFFLINE<br>Vyber projekt z terminálu...</p>
+                    </div>
+                    <div class="display-content">
+                    </div>
+                </div> </div> <div class="project-details-storage" style="display: none;">
+
+                <div id="detail-portfolio">
+                    <img src="projekt1-velky.png" alt="Veľký náhľad Portfólia" class="detail-image" onerror="this.src='https://placehold.co/600x400/333/ccc?text=Portfolio+Detail'; this.onerror=null;">
+                    <h3 class="detail-title">Osobné Portfólio</h3>
+                    <p class="detail-description">Toto je detailnejší popis projektu osobného portfólia. Vytvoril som ho s cieľom prezentovať svoje zručnosti v HTML, CSS a JavaScripte. Stránka je plne responzívna a obsahuje rôzne sekcie, ako napríklad túto sekciu projektov, moje skúsenosti a kontaktné informácie. Použil som moderné techniky ako Flexbox a Grid pre layout a Intersection Observer pre animácie pri skrolovaní.</p>
+                    <div class="detail-tags">
+                        <span class="tag html">HTML5</span>
+                        <span class="tag css">CSS3</span>
+                        <span class="tag js">JavaScript</span>
+                        <span class="tag responsive">Responzívny dizajn</span>
+                    </div>
+                    <div class="detail-links">
+                        <a href="#" target="_blank" class="btn-code"><i class="fab fa-github"></i> Zdrojový kód</a>
+                        <a href="#" target="_blank" class="btn-live"><i class="fas fa-external-link-alt"></i> Živá ukážka</a>
+                    </div>
+                </div>
+
+                <div id="detail-todo-app">
+                    <img src="Projekt2-velky.png" alt="Veľký náhľad Todo App" class="detail-image" onerror="this.src='https://placehold.co/600x400/555/ccc?text=Todo+App+Detail'; this.onerror=null;">
+                    <h3 class="detail-title">React Todo Aplikácia</h3>
+                    <p class="detail-description">Jednoduchá, ale funkčná aplikácia na správu úloh postavená pomocou Reactu. Umožňuje pridávať, označovať ako hotové a mazať úlohy. Stav aplikácie sa ukladá do lokálneho úložiska prehliadača, takže úlohy zostanú zachované aj po zatvorení okna. Projekt mi pomohol precvičiť si prácu s React komponentmi, stavom a hookmi.</p>
+                    <div class="detail-tags">
+                        <span class="tag react">React</span>
+                        <span class="tag js">JavaScript</span>
+                        <span class="tag css">CSS3</span>
+                        <span class="tag localstorage">LocalStorage</span>
+                    </div>
+                    <div class="detail-links">
+                        <a href="#" target="_blank" class="btn-code"><i class="fab fa-github"></i> Zdrojový kód</a>
+                        <a href="#" target="_blank" class="btn-live"><i class="fas fa-external-link-alt"></i> Živá ukážka</a>
+                    </div>
+                </div>
+
+                <div id="detail-blog-gatsby">
+                    <img src="Todo.png" alt="Veľký náhľad Blogu" class="detail-image" onerror="this.src='https://placehold.co/600x400/777/ccc?text=Blog+Detail'; this.onerror=null;">
+                    <h3 class="detail-title">Statický Blog (Gatsby)</h3>
+                    <p class="detail-description">Rýchly a moderný blog postavený na generátore statických stránok Gatsby.js. Obsah článkov je písaný v Markdown a dáta sú načítavané pomocou GraphQL. Výsledkom je optimalizovaná stránka s výborným výkonom a SEO vlastnosťami. Tento projekt demonštruje prácu s ekosystémom Reactu a modernými webovými technológiami.</p>
+                    <div class="detail-tags">
+                        <span class="tag gatsby">Gatsby</span>
+                        <span class="tag react">React</span>
+                        <span class="tag graphql">GraphQL</span>
+                        <span class="tag markdown">Markdown</span>
+                    </div>
+                    <div class="detail-links">
+                        <a href="#" target="_blank" class="btn-code"><i class="fab fa-github"></i> Zdrojový kód</a>
+                        <a href="#" target="_blank" class="btn-live"><i class="fas fa-external-link-alt"></i> Živá ukážka</a>
+                    </div>
+                </div>
+
+                <div id="detail-vue-xyz">
+                    <img src="Todo.png" alt="Veľký náhľad Projektu XYZ" class="detail-image" onerror="this.src='https://placehold.co/600x400/999/ccc?text=XYZ+Detail'; this.onerror=null;">
+                    <h3 class="detail-title">Project XYZ (Vue.js)</h3>
+                    <p class="detail-description">Experimentálny projekt zameraný na preskúmanie možností frameworku Vue.js. Aplikácia komunikuje s externým API na získavanie a zobrazovanie dát. V rámci projektu som sa učil pracovať s Vue komponentmi, routrom a stavovým manažmentom (napr. Vuex alebo Pinia). Cieľom bolo otestovať reaktivitu a flexibilitu Vue.</p>
+                    <div class="detail-tags">
+                        <span class="tag vue">Vue.js</span>
+                        <span class="tag js">JavaScript</span>
+                        <span class="tag api">API</span>
+                        <span class="tag axios">Axios</span>
+                    </div>
+                    <div class="detail-links">
+                        <a href="#" target="_blank" class="btn-code"><i class="fab fa-github"></i> Zdrojový kód</a>
+                        <a href="#" target="_blank" class="btn-live"><i class="fas fa-external-link-alt"></i> Živá ukážka</a>
+                    </div>
+                </div>
+
+            </div> </section> <section id="work" class="experience-skills-section animate-on-scroll">
+            <h2>Skúsenosti & Zručnosti</h2>
+            <div class="work-layout-container">
+                <div class="skills-column">
+                    <h3>Technické Zručnosti</h3>
+                    <div class="skill-category">
+                        <h4>Jazyky</h4>
+                        <div class="skills-grid">
+                            <div class="skill-item"><i class="devicon-html5-plain colored"></i><span>HTML5</span></div>
+                            <div class="skill-item"><i class="devicon-css3-plain colored"></i><span>CSS3</span></div>
+                            <div class="skill-item"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+                            <div class="skill-item"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Frameworky & Knižnice</h4>
+                        <div class="skills-grid">
+                            <div class="skill-item"><i class="devicon-react-original colored"></i><span>React</span></div>
+                            <div class="skill-item"><i class="devicon-vuejs-plain colored"></i><span>Vue.js</span></div>
+                            <div class="skill-item"><i class="devicon-nodejs-plain colored"></i><span>Node.js</span></div>
+                            <div class="skill-item"><i class="devicon-express-original colored"></i><span>Express</span></div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Nástroje & Databázy</h4>
+                        <div class="skills-grid">
+                            <div class="skill-item"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+                            <div class="skill-item"><i class="devicon-docker-plain colored"></i><span>Docker</span></div>
+                            <div class="skill-item"><i class="devicon-mongodb-plain colored"></i><span>MongoDB</span></div>
+                            <div class="skill-item"><i class="devicon-postgresql-plain colored"></i><span>PostgreSQL</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience-column">
+                    <h3>Pracovné Skúsenosti</h3>
+                    <div class="experience-card">
+                        <div class="experience-header">
+                            <img src="SAV.svg" alt="Logo Firmy 1" class="experience-logo" onerror="this.src='https://placehold.co/50x50/0A66C2/ffffff?text=F1'; this.onerror=null;">
+                            <div class="experience-title">
+                                <h4>Hardware Tester </h4>
+                                <span>Slovenská Akademia vied  | 2022 – 2023</span>
+                            </div>
+                        </div>
+                        <ul class="experience-description">
+                            <li>Vývoj a údržba používateľských rozhraní pre kľúčové produkty.</li>
+                            <li>Spravovanie Databázy</li>
+                            <li>Meranie Čipov </li>
+                        </ul>
+                        <div class="experience-tags">
+                            <span class="tag react">Luiqubase</span><span class="tag js">Excel</span><span class="tag git">Git</span>
+                        </div>
+                    </div>
+                    <div class="experience-card">
+                        <div class="experience-header">
+                            <img src="logo_aski.png" alt="Logo Firmy 2" class="experience-logo" onerror="this.src='https://placehold.co/50x50/777777/ffffff?text=F2'; this.onerror=null;">
+                            <div class="experience-title">
+                                <h4>AI Lectoring</h4>
+                                <span>ASKI | 2025 – 2026</span>
+                            </div>
+                        </div>
+                        <ul class="experience-description">
+                            <li>Práca s AI komponentami a Soft Skills</li>
+                            <li>Používateľský výskum a testovanie použiteľnosti.</li>
+                            <li>Tvorba dizajnových systémov a Dokumentov</li>
+                        </ul>
+                        <div class="experience-tags">
+                            <span class="tag figma">AI Tools</span><span class="tag ux">UX Research</span><span class="tag ui">Canva</span>
+                        </div>
+                    </div>
+                    <div class="experience-card">
+                        <div class="experience-header">
+                            <img src="logo_aski.png" alt="Logo Firmy 3" class="experience-logo" onerror="this.src='https://placehold.co/50x50/333333/ffffff?text=F3'; this.onerror=null;">
+                            <div class="experience-title">
+                                <h4>Člen Spoločnosti ASKII</h4>
+                                <span>ASKII | 2025 – 2027</span>
+                            </div>
+                        </div>
+                        <ul class="experience-description">
+                            <li>Asistencia pri vývoji webových aplikácií.</li>
+                            <li>Asistencia pri projektoch a výskumoch</li>
+                            <li>Učenie sa nových technológií a postupov.</li>
+                        </ul>
+                        <div class="experience-tags">
+                            <span class="tag html">HTML5</span><span class="tag css">CSS3</span><span class="tag js">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+            <section id="about" class="spotify-themed-about animate-on-scroll">
+                <div class="about-container">
+                    <div class="about-header">
+                        <div class="profile-pic-container">
+                            <img src="ja%20bez%20pozadia.png" alt="Profilová fotka Jakuba" onerror="this.src='https://placehold.co/150x150/191414/ffffff?text=JA'; this.onerror=null;">
+                        </div>
+                        <div class="about-header-text">
+                            <h2>Jakub Gloncak</h2>
+                            <p class="about-subtitle">Electronic Music is my daily shock</p>
+                        </div>
+                    </div>
+                    <div class="spotify-content-area">
+                        <div class="spotify-left-column">
+                            <h3>Aktuálne počúvam</h3>
+                            <div class="spotify-swiper-container">
+                                <button id="spotify-prev" class="spotify-nav-btn" aria-label="Predchádzajúca skladba"><i class="fas fa-backward-step"></i></button>
+                                <div class="spotify-embed" id="spotify-player-wrapper">
+                                    <iframe id="spotify-iframe" style="border-radius:12px" src="" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Spotify Embed Player"></iframe>
+                                </div>
+                                <button id="spotify-next" class="spotify-nav-btn" aria-label="Ďalšia skladba"><i class="fas fa-forward-step"></i></button>
+                            </div>
+                            <div class="music-preferences">
+                                <h4>Obľúbené žánre</h4>
+                                <ul>
+                                    <li><i class="fas fa-headphones-alt"></i> Elektronická hudba (Techno, House)</li>
+                                    <li><i class="fas fa-guitar"></i> Rock & Alternatíva</li>
+                                    <li><i class="fas fa-record-vinyl"></i> Lo-fi / Chillhop na sústredenie</li>
+                                </ul>
+                            </div>
+                            <div class="other-links">
+                                <h4>Kde ma ešte nájdeš</h4>
+                                <a href="https://soundcloud.com/tvojprofil" target="_blank" class="soundcloud-button" aria-label="Môj SoundCloud profil"><i class="fab fa-soundcloud"></i> SoundCloud</a>
+                            </div>
+                        </div>
+                        <div class="spotify-right-column">
+                            <h3>Niečo o mne</h3>
+                            <div class="spotify-comment-section">
+                                <p><i class="fas fa-quote-left"></i> Zanietený pre tvorbu čistého kódu a intuitívnych webových rozhraní. Keď nie som za obrazovkou, nájdeš ma v posilke alebo pri objavovaní novej hudby. <i class="fas fa-quote-right"></i></p>
+                                <p>Hudba je pre mňa veľkou inšpiráciou aj relaxom pri práci.</p>
+                            </div>
+                            <div class="about-fitness">
+                                <h4>Fitness Cesta</h4>
+                                <p>Pohyb je dôležitý. Aktuálne sa zameriavam na silový tréning.</p>
+                                <div class="fitness-gallery">
+                                    <img src="Todo.png" alt="Fitko 1" onerror="this.src='https://placehold.co/100x100/777/eee?text=Fit1'; this.onerror=null;">
+                                    <img src="Todo.png" alt="Fitko 2" onerror="this.src='https://placehold.co/100x100/777/eee?text=Fit2'; this.onerror=null;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contacts" class="instagram-themed-contacts animate-on-scroll">
+                <div class="contact-layout-container">
+                    <div class="instagram-post-container animate-on-scroll">
+                        <div class="post-header">
+                            <div class="post-header-profile">
+                                <img src="ig-profil.jpg" alt="Profilová fotka Jakuba" class="post-profile-pic" onerror="this.src='https://placehold.co/40x40/cccccc/333333?text=JA'; this.onerror=null;">
+                                <span class="post-username">_j2kub_</span>
+                            </div>
+                            <i class="fas fa-ellipsis-h post-options"></i>
+                        </div>
+                        <div class="post-image-container">
+                            <img src="ig-fotka.jpg" alt="Kontakt - pracovný stôl" class="post-image" onerror="this.src='https://placehold.co/600x600/eeeeee/cccccc?text=Kontaktujte+ma'; this.onerror=null;">
+                        </div>
+                        <div class="post-actions">
+                            <div class="action-icons-left">
+                                <i id="insta-heart-icon" class="fa-regular fa-heart" aria-label="Páči sa mi"></i>
+                                <i id="insta-comment-icon" class="fa-regular fa-comment" aria-label="Komentovať"></i>
+                                <i class="fa-regular fa-paper-plane" aria-label="Zdieľať"></i>
+                            </div>
+                            <div class="action-icons-right">
+                                <i class="fa-regular fa-bookmark" aria-label="Uložiť"></i>
+                            </div>
+                            <div class="heart-particle-container"></div>
+                            <div id="insta-comment-bubble" class="comment-bubble">Správa odoslaná! 😉</div>
+                        </div>
+                        <div class="post-contact-info">
+                            <p class="contact-prompt">
+                                <strong>Zostaňme v kontakte!</strong> Najrýchlejšie ma nájdeš tu:
+                            </p>
+                            <div class="insta-email-link">
+                                <span>Primárny kontakt:</span>
+                                <a href="mailto:kubogloncak@gmail.com">kubogloncak@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="other-contacts-panel">
+                        <h3>Ďalšie možnosti</h3>
+                        <p>Nájdeš ma aj na týchto platformách:</p>
+                        <div class="contact-grid-large">
+                            <a href="https://discord.com/users/YOUR_ID" target="_blank" class="contact-link-box-large discord" aria-label="Môj Discord profil"><i class="fab fa-discord"></i><span>Discord</span></a>
+                            <a href="https://www.facebook.com/YOUR_PROFILE" target="_blank" class="contact-link-box-large facebook" aria-label="Môj Facebook profil"><i class="fab fa-facebook-f"></i><span>Facebook</span></a>
+                            <a href="https://wa.me/YOUR_NUMBER" target="_blank" class="contact-link-box-large whatsapp" aria-label="Môj WhatsApp"><i class="fab fa-whatsapp"></i><span>WhatsApp</span></a>
+                            <a href="https://www.linkedin.com/in/YOUR_PROFILE" target="_blank" class="contact-link-box-large linkedin" aria-label="Môj LinkedIn profil"><i class="fab fa-linkedin-in"></i><span>LinkedIn</span></a>
+                            <a href="mailto:tvoj.email@example.com" class="contact-link-box-large email" aria-label="Môj Email"><i class="fas fa-envelope"></i><span>Email</span></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="enhanced-footer">
+                <p class="footer-copyright">© 2025 Jakub Gloncak</p>
+            </footer>
+
+        </div> <div class="panel page2">
+        <div class="timeline-container" id="profile-timeline-start">
+            <h2>Moja Cesta</h2>
+            <div class="timeline">
+                <div class="timeline-item" data-reveal-facts="fact-birthplace">
+                    <div class="timeline-marker">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3><i class="fas fa-baby"></i> Detstvo</h3>
+                        <p>Narodený a vyrastajúci v Trnave. Môj záujem o Informatiku a elektorniku začal skoro...</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                        <div class="timeline-fact-bubble" id="fact-birthplace">
+                            🌍 Pôvodne z Trnavy, aktualne v Brne.
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item item-right" data-reveal-facts="fact-highschool,fact-university">
+                    <div class="timeline-marker">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3><i class="fas fa-graduation-cap"></i> Vzdelanie</h3>
+                        <h4>Stredná škola</h4>
+                        <p>Navštevoval som Strednu technicku skolu v Trnave so zameraním na Elektorniku . Kľúčové projekty zahŕňali hardware ako moj hlavny projekt bol LED display</p>
+                        <div class="timeline-fact-bubble" id="fact-highschool">
+                            🎓 Highlight zo SŠ: Reprezentoval som skolu nie len v športe ale aj v SOČ.
+                        </div>
+                        <h4>Univerzita</h4>
+                        <p>Aktuálne študujem Informačné technologie na Fakulte Informačných technologií v Brne. Obľúbené predmety sú pravdepodobne zamerané na UI a responzivitu</p>
+                        <div class="timeline-fact-bubble" id="fact-university">...
+                            💡 Zameranie na VŠ: Zanietený pre Frontend a UX/UI..
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-reveal-facts="fact-comicsalon">
+                    <div class="timeline-marker">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3><i class="fas fa-briefcase"></i> Skúsenosti & Aktivity</h3>
+                        <h4>Comic Salon Bratislava</h4>
+                        <p>Dobrovoľník/Pracovník na Comic Salone, AnimeFest v Brne, Vypomahal na roznych akciach zameraných na herné koznole napriklad Nintendo a pod.</p>
+                        <div class="timeline-fact-bubble" id="fact-comicsalon">
+                            🦸‍♂️ Comic Salon spomienka: Uz tam chodim aktívne pracovat par rokov a stale je tam nieco nové.
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item item-right" data-reveal-facts="fact-barista">
+                    <div class="timeline-marker">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3><i class="fas fa-certificate"></i> Certifikáty</h3>
+                        <h4>Baristický Kurz</h4>
+                        <p>Certifikovaný barista, zručný v príprave rôznych kávových nápojov.</p>
+                        <div class="timeline-fact-bubble" id="fact-barista">
+                            ☕ Viem spraviť skvelú kávu!
+                        </div>
+                        <ul>
+                        </ul>
+                            <h3>Certifikát v Manažér v IT</h3>
+                            <h3>Certifikát v Programovanie v C</h3>
+
+                    </div>
+                </div>
+                <div class="timeline-item" data-reveal-facts="fact-gym,fact-webdev,fact-bouldering,fact-music,fact-pokemon,fact-starwars">
+                    <div class="timeline-marker">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3><i class="fas fa-heart"></i> Záľuby & Zručnosti</h3>
+                        <p>Som športovo aktívny, Aktívne sa teraz venujem programovaniu, Zučasnujem sa na MBA kurze a kurze v Manažovní ludí potvrdené fakultou FIT</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                        <div class="timeline-fact-bubble" id="fact-gym">💪 Potrebuješ parťáka do fitka alebo trénera?</div>
+                        <div class="timeline-fact-bubble" id="fact-webdev">🌐 Rád ti pomôžem začať s web developmentom!</div>
+                        <div class="timeline-fact-bubble" id="fact-bouldering">🧗 Poďme niekedy na bouldering!</div>
+                        <div class="timeline-fact-bubble" id="fact-music">🎹🥁 Hudobník srdcom (Klavír & Bicie).</div>
+                        <div class="timeline-fact-bubble" id="fact-pokemon">⚡ Treba ich všetky chytiť! (Pokémon Tréner)</div>
+                        <div class="timeline-fact-bubble" id="fact-starwars">🚀 Nech ťa Sila sprevádza. (Star Wars Fanúšik)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="enhanced-footer">
+            <p class="footer-copyright">© 2025 Jakub Gloncak</p>
+        </footer>
+    </div> </div> </main>
+
+<button id="scrollToTopBtn" class="scroll-top-btn hidden" aria-label="Posunúť hore">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.89/build/spline-viewer.js"></script>
+<script src="index.js"></script>
+
+</body>
+</html>
