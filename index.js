@@ -1,6 +1,8 @@
-// Wait for the DOM to be fully loaded before executing the script
+// Autor Jakub Gloncak
+// ospravedlnujem sa aj tu za ohavny kod ale neni som az tak dobry Javascripter ale kod pekne funguje
+
+// tuto zacina DOMload
 document.addEventListener('DOMContentLoaded', () => {
-    // --- DOM Element Selection (Pôvodné + Nové) ---
     const slider = document.getElementById('slider');
     const btnToggle = document.getElementById('btnToggle');
     const header = document.querySelector('header');
@@ -27,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const timelineItems = document.querySelectorAll('.timeline-item');
     const animatedElements = document.querySelectorAll('.animate-on-scroll');
 
-    // NOVÉ/UPRAVENÉ: Elementy pre sekciu projektov
+    // Elementy pre sekciu projektov
     const projectCards = document.querySelectorAll('.project-card'); // Karty v termináli
     const projectDisplayScreen = document.querySelector('.project-display-screen'); // Pravý displej
     const displayContent = projectDisplayScreen?.querySelector('.display-content'); // Obsah displeja
@@ -36,14 +38,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // ZMENA: Budeme listener dávať na kontajner mriežky pre event delegation
     const projectCardsGrid = document.querySelector('.project-cards-grid');
 
-    // --- Application State (Pôvodné + Nové) ---
+    //Application State
     let currentPanelIndex = 0; // 0 pre panel1, 1 pre panel2
     let isSliding = false;
     const slideDuration = 800; // Musí zodpovedať --transition-slide v CSS (v ms)
     let scrollAfterSlideTarget = null; // Element na scroll po slide
     let rafScrollId; // ID pre requestAnimationFrame (pre scroll)
     const spotifyTrackSources = [
-        // NAHRAĎ TOTO SKUTOČNÝMI SPOTIFY EMBED URL!
+        // SPOTIFY EMBED URL
         "https://open.spotify.com/embed/track/72FGmNspFL56LlAmwM1Rzv?utm_source=generator",
         "https://open.spotify.com/embed/track/59z99kJAUvNHtNcIZkxlQt?utm_source=generator",
         "https://open.spotify.com/embed/track/3hcivoswCVR8LZkHR8MYA5?utm_source=generator"
@@ -56,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // NOVÉ: Sledovanie aktuálne zobrazeného projektu
     let currentlyDisplayedProjectId = null;
 
-    // --- Core Functions (Navigácia, Panely, Scroll - z poslednej verzie) ---
+    // Navigácia, Panely, Scroll
 
     /**
      * Plynulo posunie daný panel na cieľový element alebo na vrch.
@@ -210,7 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // --- Pôvodné funkcie (Spotify, Instagram, Swipe, atď.) ---
+    // funkcie (Spotify, Instagram, Swipe)
 
     /**
      * Loads a specific Spotify track into the iframe with fade effect.
@@ -364,7 +366,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    // --- Intersection Observer Setup (Pôvodné) ---
+    // --- Intersection Observer Setup ---
 
     const handleTimelineIntersection = (entries, observer) => {
         entries.forEach(entry => {
@@ -401,33 +403,33 @@ document.addEventListener('DOMContentLoaded', () => {
     else console.warn("Nenašli sa žiadne elementy '.animate-on-scroll' na sledovanie.");
 
 
-    // --- Event Listeners Setup (Kombinované + Zmeny pre projekty) ---
+    // --- Event Listeners Setup
     console.log("Pripájam event listenery...");
 
-    // Prepínanie panelov tlačidlom (Používa novú togglePanel)
+    // Prepínanie panelov tlačidlom (PoužívatogglePanel)
     if (btnToggle) btnToggle.addEventListener('click', () => { scrollAfterSlideTarget = null; if (currentPanelIndex === 0) togglePanel(() => smoothScrollPanel(panels[1])); else togglePanel(); });
     else console.error("Element #btnToggle not found.");
 
-    // Kliknutie na navigačné odkazy (Používa novú handleNavLinkClick)
+    // Kliknutie na navigačné odkazy (PoužívahandleNavLinkClick)
     if (allNavLinks.length > 0) allNavLinks.forEach(link => link.addEventListener('click', handleNavLinkClick));
     else console.warn("Nenašli sa žiadne navigačné odkazy.");
 
-    // Kliknutie na "Scroll to Top" tlačidlo (Používa novú scrollToActivePanelTop)
+    // Kliknutie na "Scroll to Top" tlačidlo (Používa scrollToActivePanelTop)
     if (scrollToTopBtn) scrollToTopBtn.addEventListener('click', scrollToActivePanelTop);
     else console.warn("Element #scrollToTopBtn nebol nájdený.");
 
-    // Sledovanie scrollu v paneloch (Používa novú handleScroll)
+    // Sledovanie scrollu v paneloch (Používa handleScroll)
     if (panels.length > 0) panels.forEach((panel, index) => panel.addEventListener('scroll', () => { if (index === currentPanelIndex) handleScroll(); }, { passive: true }));
     else console.error("Nenašli sa žiadne elementy .panel.");
 
-    // Mobilná navigácia (hamburger) (Používa pôvodnú toggleMobileNav)
+    // Mobilná navigácia (hamburger) toggleMobileNav)
     if (hamburgerButton) hamburgerButton.addEventListener('click', toggleMobileNav);
     else console.error("Element #hamburger-button not found.");
 
-    // Swipe gestá (Používa pôvodnú handleSwipeGesture, ktorá volá novú togglePanel)
+    // Swipe gestá (PoužívahandleSwipeGesture, ktorá vola togglePanel)
     if (slider) { slider.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; }, { passive: true }); slider.addEventListener('touchend', e => { touchEndX = e.changedTouches[0].screenX; handleSwipeGesture(); }, { passive: true }); }
 
-    // Hover efekt pre meno (Pôvodný kód)
+    // Hover efekt pre meno
     if (logo && fullName) { const logoContainer = logo.closest('.logo-container'); if (logoContainer) { logoContainer.addEventListener('mouseenter', () => { fullName.style.opacity = '1'; fullName.style.transform = 'translateY(-50%) translateX(10px) scale(1)'; }); logoContainer.addEventListener('mouseleave', () => { fullName.style.opacity = '0'; fullName.style.transform = 'translateY(-50%) translateX(5px) scale(0.95)'; }); } }
     else console.warn("Element #logo alebo #fullName nebol nájdený pre hover efekt.");
 
@@ -437,13 +439,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (prevBtn) prevBtn.addEventListener('click', () => { if (currentTrackIndex > 0) loadSpotifyTrack(currentTrackIndex - 1); });
     else console.error("Element #spotify-prev not found.");
 
-    // Interakcie v Instagram sekcii (Pôvodný kód)
+    // Interakcie v Instagram sekcii
     if (instaHeartIcon) instaHeartIcon.addEventListener('click', () => { instaHeartIcon.classList.toggle('liked'); if (instaHeartIcon.classList.contains('liked')) triggerHeartAnimation(); });
     else console.warn("Element #insta-heart-icon not found.");
     if (instaCommentIcon) instaCommentIcon.addEventListener('click', showCommentBubble);
     else console.warn("Element #insta-comment-icon not found.");
 
-    // ZMENA: Listener pre kliknutie na karty projektov (event delegation)
+
     if (projectCardsGrid) {
         projectCardsGrid.addEventListener('click', handleProjectCardClick);
         console.log("Pripravený click listener pre .project-cards-grid.");
@@ -451,10 +453,10 @@ document.addEventListener('DOMContentLoaded', () => {
         console.warn("Nenašiel sa kontajner .project-cards-grid pre event delegation.");
     }
 
-    // --- Initial Page Setup (Kombinované) ---
+    // --- Initial Page Setup
     console.log("Vykonávam počiatočné nastavenie...");
 
-    // Typed.js (Pôvodný kód)
+    // Typed.js
     const typedElement = document.getElementById('typed-hero');
     if (typedElement && typeof Typed !== 'undefined') {
         new Typed('#typed-hero', {
@@ -464,10 +466,10 @@ document.addEventListener('DOMContentLoaded', () => {
     } else if (!typedElement) console.error("Element #typed-hero not found for Typed.js.");
     else console.error("Typed.js library not loaded.");
 
-    // Tlačidlo Profil/Domov (Používa novú logiku)
+    // Tlačidlo Profil/Domov
     if (btnToggle) { btnToggle.textContent = currentPanelIndex === 0 ? 'Profil' : 'Domov'; btnToggle.classList.toggle('profile-active', currentPanelIndex === 1); }
 
-    // Spotify (Pôvodný kód)
+    // Spotify
     if (spotifyTrackSources.length > 0 && spotifyIframe) {
         setTimeout(() => { loadSpotifyTrack(0); }, 100);
     } else {
@@ -477,7 +479,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (nextBtn) nextBtn.disabled = true;
     }
 
-    // Scroll to Top tlačidlo (Používa novú handleScroll)
+    // Scroll to Top tlačidlo
     handleScroll();
 
     console.log("Kombinovaný JavaScript (v5 - click interaction) inicializovaný.");
