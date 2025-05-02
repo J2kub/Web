@@ -1,4 +1,9 @@
 /*
+-- Author Jakub GLoncak
+-- xgloncj00
+-- Dufam ze nevadi ze je kod taky ohavny, je to zlozenie viacerych casti naraz ale funguje pekne
+-- Opravedlnujem za prelinanie viacerych celkov ktore som robil zvlast a potom spajal
+
   1. Základné štýly, Reset a Premenné
  */
 
@@ -1214,7 +1219,7 @@ section#contacts.instagram-themed-contacts {
 .panel.page2::before {
     content: '';
     position: absolute;
-    top: -50px; left: -50px; right: -50px; bottom: -50px;height: 250%;
+    top: -50px; left: -50px; right: -50px; bottom: -50px;height: 350%;
     --size: 60px;
     --line-color-1: var(--color-panel2-grid-line-1);
     --line-color-2: var(--color-panel2-grid-line-2);
@@ -1238,7 +1243,7 @@ section#contacts.instagram-themed-contacts {
 .panel.page2::after {
     content: '';
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 250%;
+    top: 0; left: 0; width: 100%; height: 350%;
     background: radial-gradient(ellipse at center, var(--color-panel2-pulse-glow) 0%, transparent 70%);
     background-size: 150% 150%;
     background-position: center center;
